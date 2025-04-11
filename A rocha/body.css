@@ -1,0 +1,146 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+
+/* Fundo com imagem */
+header {
+  background: url('/imagem/a rocha - principal.jpeg') no-repeat center center/cover;
+  height: 110vh;
+  position: relative;
+}
+
+/* Camada escura */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideUp 1s ease-out;
+}
+
+/* Caixa de conteúdo */
+.center-box {
+  background-color: rgba(25, 10, 0, 0.95); /* tom escuro quente */
+  color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(255, 100, 0, 0.3);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 1.5s ease;
+}
+
+/* Títulos */
+.center-box h1 {
+  font-size: 3.0rem;
+  text-transform: uppercase;
+  font-weight: 950;
+  color: #ffa600;
+  margin-bottom: 10px;
+}
+
+.slogan {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: #ffc04c;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* Lista de tópicos */
+.topic-list {
+  list-style: none;
+  text-align: left;
+  margin-top: 30px;
+  padding-left: 0;
+}
+
+.topic-list li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  padding-left: 28px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.topic-list li::before {
+  content: '🔥';
+  position: absolute;
+  left: 0;
+  color: #ff7b00;
+  font-size: 1.2rem;
+}
+
+/* Botão */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  background: #ff7b00;
+  color: #fff;
+  padding: 16px 30px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e06600;
+}
+
+/* Rodapé */
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #000;
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .center-box h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+}
